@@ -1,0 +1,48 @@
+name:                lyahfgg-learnings
+version:             0.1.0.0
+github:              "AnirudhVyas/lyahfgg-learnings"
+license:             BSD3
+author:              "Anirudh Vyas"
+maintainer:          "ricky.nj@gmail.com"
+copyright:           "Anirudh Vyas"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            App category here
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/Github username here/lyahfgg-learnings#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  lyahfgg-learnings-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - lyahfgg-learnings
+
+tests:
+  lyahfgg-learnings-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - lyahfgg-learnings
